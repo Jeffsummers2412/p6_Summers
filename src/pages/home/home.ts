@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { SigninPage } from '../signin/signin';
+import { RegisterPage } from '../register/register';
 
 @Component({
   selector: 'page-home',
@@ -11,4 +13,11 @@ export class HomePage {
 
   }
 
+  goToLogin(){
+    this.navCtrl.push(SigninPage);
+  }
+
+  goToRegisterPage(){
+    this.navCtrl.push(RegisterPage);
+  }
 }
