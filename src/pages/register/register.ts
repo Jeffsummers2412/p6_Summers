@@ -18,7 +18,6 @@ export class RegisterPage {
   }
 
  onRegister(form: NgForm){
-  this.navCtrl.push(ThankyouPage)
   this.authService.register(form.value.email, form.value.password)
    .then(data => this.navCtrl.push(ThankyouPage))
    .catch(error => {
@@ -28,6 +27,5 @@ export class RegisterPage {
      })
      alert.present();
    });
-   
  }
 }

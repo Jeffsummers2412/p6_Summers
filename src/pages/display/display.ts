@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { MyComponent } from '../../components/foo'
 
@@ -8,7 +8,8 @@ import { MyComponent } from '../../components/foo'
   templateUrl: 'display.html',
 })
 export class DisplayPage {
-
+  @ViewChild('nav') nav: NavController;
+  
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 

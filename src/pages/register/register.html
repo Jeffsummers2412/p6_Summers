@@ -30,7 +30,7 @@
           type="email"
           ngModel
           name="email"
-          required
+          pattern = "/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/"
           ></ion-input>
       </ion-item>
       <ion-item>
@@ -61,6 +61,6 @@
           ></ion-input>
       </ion-item>
     </ion-list>
-    <button ion-button block type="submit"[disabled]="!f.valid">Register</button>
+    <button ion-button block type="submit">Register</button>
   </form>
 </ion-content>

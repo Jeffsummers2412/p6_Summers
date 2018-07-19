@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { DisplayPage } from '../display/display';
 import { AuthService } from '../../services/auth';
@@ -10,7 +10,8 @@ import { NgForm } from '@angular/forms';
   templateUrl: 'signin.html',
 })
 export class SigninPage {
-
+  //@ViewChild('nav') nav: NavController;
+  
   constructor(public navCtrl: NavController, 
     public navParams: NavParams,
     private authService: AuthService) {

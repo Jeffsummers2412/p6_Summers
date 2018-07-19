@@ -3,12 +3,13 @@ import { Platform, NavController, MenuController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { HomePage } from '../pages/home/home';
+
 import firebase from 'firebase';
 import { AuthService } from '../services/auth';
 import { DisplayPage } from '../pages/display/display';
 import { SigninPage } from '../pages/signin/signin';
 import { RegisterPage } from '../pages/register/register';
+import { ThankyouPage } from '../pages/thankyou/thankyou';
 
 @Component({
   templateUrl: 'app.html'
@@ -16,6 +17,7 @@ import { RegisterPage } from '../pages/register/register';
 })
 export class MyApp {
   rootPage:any = SigninPage;
+  displayPage = DisplayPage;
   signinPage = SigninPage;
   registerPage = RegisterPage;
   isAuthenticated = false;
@@ -39,6 +41,7 @@ export class MyApp {
       firebase.auth().onAuthStateChanged(user => {
         if(user){
           this.isAuthenticated = true;
+          this.rootPage = DisplayPage;
         }else{
           this.isAuthenticated = false;
           this.rootPage = SigninPage;

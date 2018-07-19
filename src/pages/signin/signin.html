@@ -13,7 +13,19 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding text-center class="home">
+  <ul class="bg-bubbles">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
   <form #f="ngForm" (ngSubmit)="goToDisplay(f)">
   <ion-list>
     <ion-item>
@@ -26,4 +38,7 @@
   </ion-list>
   <button ion-button type="submit" [disabled]="!f.valid">Log In</button>
 </form>
+<p class="logo">
+  <ion-icon name="ios-chatbubbles"></ion-icon>
+</p>
 </ion-content>
